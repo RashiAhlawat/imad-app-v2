@@ -22,6 +22,28 @@ var articleOne = {
     `
 };
 
+var articleTwo = {
+    title :'Article Two | Imad Hausra',
+    heading : 'Article two',
+    date :'Feb 10, 2017',
+    content :`
+                    <p>
+                        This is article second.
+                    </p>
+    `
+};
+
+var articleThree = {
+    title :'Article Three | Imad Hausra',
+    heading : 'Article three',
+    date :'Feb 19, 2017',
+    content :`
+                    <p>
+                        This is article third.
+                    </p>
+    `
+};
+
 
 
 function createTemplate(data){
@@ -74,11 +96,11 @@ app.get('/articleone' , function(req, res){
 });
 
 app.get('/articletwo',function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+     res.send(createTemplate(articleTwo));
 });
 
 app.get('/articlethree',function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+    res.send(createTemplate(articleThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
