@@ -56,7 +56,7 @@ var content = data.content;
 var htmlTemplate = `
 <html>
     <head>
-       ${title}
+        <title> ${title}</title>
         <meta name= "viewport" content="width=device-width , initial-scale=1" />
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -66,12 +66,12 @@ var htmlTemplate = `
                 <a href="/">Home</a>
             </div>
             <hr/>
-             ${heading}
+            <h2>${heading}</h2>
             <div>
                 ${date}
             </div>
             <div>
-               ${content}
+                ${content}
             </div>
         </div>
     </body>
