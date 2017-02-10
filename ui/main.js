@@ -4,3 +4,13 @@ console.log('Loaded!');
 
 var element = document.getElementById("main_text");
 element.innerHTML = "new value";
+
+var img = document.getElementById("madi");
+var marginPixel=0;
+function moveRight(){
+    marginPixel = marginPixel + 1;
+    img.style.marginLeft = marginPixel +"px";
+}
+img.onclick = function(){
+    var intervL = setInterval(moveRight,50);
+};
