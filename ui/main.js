@@ -43,7 +43,7 @@ button.onclick = function(){
  
   // Make a request
    var inputName = document.getElementById("name");
-  var Name = inputName.value;
+  var name = inputName.value;
   
   request.open("GET","http://rashiahlawat.imad.hasura-app.io/submit-name?name=" + name, true);
   request.send(null);
