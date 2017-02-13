@@ -98,8 +98,7 @@ app.get('/counter', function (req, res) {
 var nameLists = [];
 app.get('/submit-name' , function(req ,res ){
    var responseName = req.query.name;
-   var name = responseName.value;
-   nameLists.push(name);
+   nameLists.push(responseName);
    res.send(JSON.stringify(nameLists));
    
 });
