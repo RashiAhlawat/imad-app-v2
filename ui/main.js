@@ -40,10 +40,11 @@ button.onclick = function(){
       
   };
   
-  var inputName = document.getElementById("name");
+ 
+  // Make a request
+   var inputName = document.getElementById("name");
   var Name = inputName.value;
   
-  // Make a request
   request.open("GET","http://rashiahlawat.imad.hasura-app.io/submit-name?name=" + name, true);
   request.send(null);
  
