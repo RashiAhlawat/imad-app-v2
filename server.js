@@ -86,6 +86,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var nameLists = [];
+app.get('/submit-name' , function(req ,res ){
+   var responseName = req.query.name;
+   var name = responseName.value;
+   nameLists.push(name);
+   res.send(JSON.stringify(nameLists));
+   
+});
+
 var counter =0;
 app.get('/counter', function (req, res) {
     counter = counter +1;
