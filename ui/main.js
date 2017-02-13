@@ -15,6 +15,23 @@
 // img.onclick = function(){
 //     var intervL = setInterval(moveRight,50);
 // };
+var inputName = document.getElementById("name");
+var Name = inputName.value;
+var button = document.getElementById("submit_but");
+button.onclick = function(){
+    
+ var names = ["name1","name2","name3","name4"];   
+ var list ="";
+ for(var i=0; i<names.lenght ;i++)
+ {
+     list += "<li>" +names[i] +"</li>";
+ }
+ var span = document.getElementById("nameList");
+ span.innerHTML = list;
+    
+};
+
+
 
 var button = document.getElementById("counter");
 var counter =0;
