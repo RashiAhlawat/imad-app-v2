@@ -21,7 +21,7 @@ var counter =0;
 button.onclick = function (){
  
  //Create request   
-  var request = XMLHttpRequest();
+  var request = new XMLHttpRequest();
   
   //Action to be performed after request is made
   request.onreadystatechange = function(){
