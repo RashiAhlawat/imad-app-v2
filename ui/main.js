@@ -15,3 +15,15 @@ function moveRight(){
 img.onclick = function(){
     var intervL = setInterval(moveRight,50);
 };
+
+var button = document.getElementById("counter");
+var counter =0;
+button.onclick = function (){
+    // var request = XMLHttpRequest();
+    
+    
+counter = counter + 1;
+var span = document.getElementById("count");
+span.innerHtml = counter.toString();
+     
+};
