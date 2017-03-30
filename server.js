@@ -18,7 +18,7 @@ var config = {
 
 
 var Pool = new Pool(config);
-app.get('/test-db' ,function(err ,res)
+app.get('/test-db' ,function(err ,result)
 {
     pool.query('SELECT * FROM article' , function(err,result)
     {
@@ -27,7 +27,7 @@ app.get('/test-db' ,function(err ,res)
             res.status(500).send(err.toString());
         }else
         {
-            res.send(JSON.toStringify(result));
+            res.send(JSON.stringify(result));
         }
     });
 });
