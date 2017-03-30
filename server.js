@@ -20,7 +20,7 @@ var config = {
 var Pool = new Pool(config);
 app.get('/test-db' ,function(err ,result)
 {
-    pool.query('SELECT * FROM article' , function(err,result)
+    Pool.query('SELECT * FROM article' , function(err,result)
     {
         if(err)
         {
